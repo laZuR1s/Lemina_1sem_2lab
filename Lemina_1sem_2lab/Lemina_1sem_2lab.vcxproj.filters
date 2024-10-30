@@ -18,6 +18,12 @@
     <Text Include="data.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="test_data.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="peremInfo.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -25,9 +31,6 @@
     </ClCompile>
     <ClCompile Include="TREE.cpp">
       <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="peremInfo.txt">
-      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

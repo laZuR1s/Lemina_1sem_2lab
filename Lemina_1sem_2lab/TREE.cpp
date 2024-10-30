@@ -5,7 +5,7 @@ TREE::~TREE()
     clear(root);
 }
 
-void TREE::clear(Tree root)
+void TREE::clear(Tree& root)
 {
     if (root)
     {
@@ -14,6 +14,22 @@ void TREE::clear(Tree root)
         delete root;
         root = nullptr;
     }
+}
+
+Tree TREE::fillFromFile(int count, std::ifstream& file)
+{
+    Tree result{};
+    if (count)
+    {
+        int count_left = count / 2;
+        int count_right = count - count_left - 1;
+        result = new NODE();
+        file >> result->info;
+        result->left = fillFromFile(count_left, file);
+        result->right = fillFromFile(count_right, file);
+
+    }
+    return result;
 }
 
 void TREE::fill(int n)
@@ -56,6 +72,7 @@ void TREE::print(Tree root, int level)
         std::cout << root->info << '\n';
         print(root->left, level + 1);
     }
+
 }
 
 Tree TREE::get_root()

@@ -128,10 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="data.txt" />
+    <Text Include="peremInfo.txt" />
+    <Text Include="test_data.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="peremInfo.txt" />
     <ClCompile Include="TREE.cpp" />
   </ItemGroup>
   <ItemGroup>
