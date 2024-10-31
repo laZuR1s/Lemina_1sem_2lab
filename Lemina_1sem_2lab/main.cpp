@@ -18,7 +18,7 @@ Tree Build_Formula(std::ifstream& file,int* arr)
 		if (c >= 'a' && c <= 'z')
 		{
 			int k = c - 'a';
-			t->info = arr[k];
+			t->info = arr[k]+'0';
 		}
 		else
 		{
@@ -151,7 +151,9 @@ int main()
 			t.clear(root);
 			break;
 		case 4:
-			Tree tr = Build_Formula(file,arr);
+			file.clear();
+			file.seekg(0, std::ios::beg);
+			Tree tr = Build_Formula(file,arr);		
 			std::cout << "\nРезультат формулы: " << Calculate(tr)<<'\n';
 		}
 
